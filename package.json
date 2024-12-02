@@ -1,0 +1,22 @@
+{
+  "name": "rehub",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "v:dev": "cd vue && vite",
+    "v:preview": "cd vue && vite build && vite preview",
+    "s:dev": "nodemon ./server/app.js",
+    "f:build": "cd vue && vite build && cd ../server && nodemon ./app.js",
+    "f:preview": "cd vue && vite build && cd ../server && node ./app.js"
+  },
+  "dependencies": {
+    "express": "^4.21.1",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.0.1",
+    "vite-plugin-vue-devtools": "^7.6.5"
+  }
+}
