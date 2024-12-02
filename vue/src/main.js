@@ -1,6 +1,10 @@
-import './assets/main.css'
+import "./assets/main.css";
 
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
+import VueCookies from "vue-cookies";
+import router from "@/modules/routing";
 
-createApp(App).mount('#app')
+createApp(App).use(router).use(VueCookies).mount("#app");
+//createMemoryHistory
+//createWebHashHistory
