@@ -66,8 +66,11 @@ button {
 .mainColorText {
   color: var(--MainColorText);
 }
+<<<<<<< HEAD
 
 *::selection {
   background-color: var(--NavButtonBackgroungColor);
   color: var(--BlueColorText);
 }
+=======
+>>>>>>> baf1d07 (Component(Input) loginIn(98%))
