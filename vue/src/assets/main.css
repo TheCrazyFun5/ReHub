@@ -3,3 +3,64 @@
   padding: 0px;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: "FiraSansCondensed";
+  src: url("/FiraSansCondensed-Regular.ttf");
+}
+:root {
+  --backgroundColor: #ffffff;
+  --change-theme-duration: 0.5s;
+  --ColorTextLogo: #1c1c1c;
+  --MainColorText: #1c1c1c;
+  --MainInputColor: rgb(124, 124, 124, 70%);
+  --MainInputColorActiv: rgb(28, 28, 28, 90%);
+}
+
+[data-theme="dark"] {
+  --backgroundColor: #1c1c1c;
+  --ColorTextLogo: #ffffff;
+  --MainColorText: #ffffff;
+  --MainInputColor: rgb(215, 215, 215, 80%);
+  --MainInputColorActiv: rgb(255, 255, 255, 90%);
+}
+
+body {
+  font-family: "FiraSansCondensed";
+  font-weight: 400;
+  background-color: var(--backgroundColor);
+  transition: background-color var(--change-theme-duration);
+}
+/* логотип  */
+.Logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  > img {
+    width: 40px;
+    height: 46px;
+  }
+  > span {
+    font-size: 30px;
+    color: var(--ColorTextLogo);
+  }
+}
+
+.mainColorText {
+  color: var(--MainColorText);
+}
+.MainInputColor {
+  color: var(--MainInputColor);
+  border-color: var(--MainInputColor);
+  background-color: transparent;
+}
+
+.MainInputColor:focus {
+  color: var(--MainInputColorActiv);
+  border-color: var(--MainInputColorActiv);
+}
+.MainInput::placeholder {
+  color: var(--MainInputColor);
+}
+.placeholderAnim {
+  color: var(--MainInputColorActiv);
+}

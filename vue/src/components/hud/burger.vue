@@ -3,7 +3,11 @@
 </script>
 
 <template>
-  <h1>burger</h1>
+  <h1>
+    burger
+    <RouterLink to="/shift">shift</RouterLink>
+    <RouterLink to="/accounting">accounting</RouterLink>
+  </h1>
 </template>
 
 <style scoped>

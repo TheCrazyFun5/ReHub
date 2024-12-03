@@ -2,7 +2,7 @@
   "name": "rehub",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
+
   "scripts": {
     "v:dev": "cd vue && vite",
     "v:preview": "cd vue && vite build && vite preview",
