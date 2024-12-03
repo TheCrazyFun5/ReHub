@@ -1,4 +1,9 @@
-import { createMemoryHistory, createRouter, createWebHashHistory, createWebHistory } from "vue-router";
+import {
+  createMemoryHistory,
+  createRouter,
+  createWebHashHistory,
+  createWebHistory,
+} from "vue-router";
 import VueCookies from "vue-cookies";
 
 //импорт страниц
@@ -13,7 +18,7 @@ import NotFound from "@/pages/NotFound.vue";
 const routes = [
   { path: "/", name: "news", component: news },
   { path: "/shift", name: "shift", component: shift },
-  { path: "/chats/:chatsID", name: "chats", component: chats },
+  { path: "/chats", name: "chats", component: chats },
   { path: "/accounting", name: "accounting", component: accounting },
   { path: "/loginIn", name: "loginIn", component: loginIn },
   { path: "/:NotFoundUrl(.*)", name: "NotFound", component: NotFound },
