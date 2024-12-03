@@ -50,19 +50,3 @@ body {
 .mainColorText {
   color: var(--MainColorText);
 }
-.MainInputColor {
-  color: var(--MainInputColor);
-  border-color: var(--MainInputColor);
-  background-color: transparent;
-}
-
-.MainInputColor:focus {
-  color: var(--MainInputColorActiv);
-  border-color: var(--MainInputColorActiv);
-}
-.MainInput::placeholder {
-  color: var(--MainInputColor);
-}
-.placeholderAnim {
-  color: var(--MainInputColorActiv);
-}
