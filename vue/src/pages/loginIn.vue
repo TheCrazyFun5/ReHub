@@ -1,5 +1,4 @@
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
 import themesButton from "@/components/ui/themesButton.vue";
 import Logo from "@/components/ui/logo.vue";
 import mainInput from "@/components/ui/mainInput.vue";
@@ -26,8 +25,8 @@ export default {
       <div className="formLogin">
         <h2 class="title mainColorText">Добро пожаловать 👋</h2>
         <div class="inputBox">
-          <mainInput paceholder="Логин" id="login" @hop="(value) => (login = value)" />
-          <mainInput type="Password" paceholder="Пароль" id="Password" @hop="(value) => (password = value)" />
+          <mainInput paceholder="Логин" id="Login" @back="(value) => (login = value)" />
+          <mainInput type="Password" paceholder="Пароль" id="Password" @back="(value) => (password = value)" />
         </div>
       </div>
     </main>
@@ -36,7 +35,7 @@ export default {
 </template>
 
 <style scoped>
-.loginIn {
+section.loginIn {
   height: 100vh;
   display: flex;
   flex-direction: column;
