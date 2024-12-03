@@ -11,8 +11,8 @@ export default {
   },
   data() {
     return {
-      text: "",
-      test2: "",
+      login: "",
+      password: "",
     };
   },
   methods: {},
@@ -25,10 +25,10 @@ export default {
     <main>
       <div className="formLogin">
         <h2 class="title mainColorText">Добро пожаловать 👋</h2>
-        <mainInput id="UserName" @hop="(ino) => (test2 = ino)" />
-        <mainInput paceholder="Логин" id="UserName" @hop="(ino) => (text = ino)" />
-
-        <p>1{{ text }}2{{ test2 }}</p>
+        <div class="inputBox">
+          <mainInput paceholder="Логин" id="login" @hop="(value) => (login = value)" />
+          <mainInput type="Password" paceholder="Пароль" id="Password" @hop="(value) => (password = value)" />
+        </div>
       </div>
     </main>
     <footer className="footer__loginIn"><themesButton /> <Logo /> <br /></footer>
@@ -45,6 +45,8 @@ export default {
 .footer__loginIn {
   display: flex;
   justify-content: space-between;
+  padding-left: 23px;
+  padding-bottom: 20px;
 }
 main {
   display: flex;
@@ -52,13 +54,22 @@ main {
   align-items: center;
 }
 .formLogin {
-  max-width: 568px;
+  max-width: 580px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .title {
   font-size: 60px;
   text-align: center;
   line-height: 66px;
+}
+.inputBox {
+  max-width: 350px;
+  margin-top: 70px;
+  width: 100%;
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
 }
 </style>

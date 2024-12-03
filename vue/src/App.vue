@@ -19,9 +19,9 @@ ThemCheck();
 
 <template>
   <template v-if="route.path === '/loginIn'"><RouterView /></template>
-  <div v-else>
+  <template v-else>
     <hud />
-  </div>
+  </template>
 </template>
 
 <style scoped>

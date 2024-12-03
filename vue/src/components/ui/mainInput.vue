@@ -6,6 +6,11 @@ export default {
       required: false,
       default: "UserName",
     },
+    type: {
+      type: String,
+      required: false,
+      default: "text",
+    },
     paceholder: {
       type: String,
       required: false,
@@ -45,17 +50,20 @@ export default {
 </script>
 
 <template>
-  <div>
-    <span class="placeholderAnim" :class="{ disabled: !activ, error: error }">{{ paceholder }}</span>
-    <input
-      :class="{ errorB: error }"
-      class="MainInput MainInputColor"
-      :placeholder="paceholder"
-      :id="id"
-      @input="text($event.target.value)"
-    />
+  <div style="display: flex; gap: 3px; flex-direction: column">
+    <div>
+      <span class="placeholderAnim" :class="{ disabled: !activ, error: error }">{{ paceholder }}</span>
+      <input
+        :type="type"
+        :class="{ errorB: error }"
+        class="MainInput MainInputColor"
+        :placeholder="paceholder"
+        :id="id"
+        @input="text($event.target.value)"
+      />
+    </div>
+    <span style="margin-left: 10px; margin-top: 13px" class="error">{{ errorText }}</span>
   </div>
-  <span style="margin-left: 10px; margin-top: 13px" class="error">{{ errorText }}</span>
 </template>
 
 <style scoped>
