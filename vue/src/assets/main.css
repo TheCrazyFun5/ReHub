@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 @font-face {
-  font-family: 'FiraSansCondensed';
-  src: url('/FiraSansCondensed-Regular.ttf');
+  font-family: "FiraSansCondensed";
+  src: url("/FiraSansCondensed-Regular.ttf");
 }
 :root {
   --backgroundColor: #ffffff;
@@ -24,6 +24,7 @@
   --HeaderСolor: #1c1c1c;
   --ColorTextCart: #1c1c1c;
   --ColorTextCartTag: #ffffff;
+<<<<<<< HEAD
 =======
   --BlueColorText: rgb(68, 143, 255, 100%);
   --BlueBackgroundLink: rgb(68, 143, 255, 25%);
@@ -33,9 +34,11 @@
   --NavButtonBackgroungColor: rgb(68, 143, 255, 25%);
   --AvatarBorderColor: rgb(124, 124, 124, 100%);
 >>>>>>> f379102 (Small Refactoring Colors Variables)
+=======
+>>>>>>> 0859732 (news(95%))
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   --backgroundColor: #1c1c1c;
   --ColorTextLogo: #ffffff;
   --MainColorText: #ffffff;
@@ -48,6 +51,7 @@
   --HeaderСolor: #d7d7d7;
   --ColorTextCart: #d7d7d7;
   --ColorTextCartTag: #d7d7d7;
+<<<<<<< HEAD
 }
 
 body {
@@ -65,6 +69,12 @@ body {
 body {
   font-family: 'FiraSansCondensed', sans-serif;
 >>>>>>> 21c41d1 (MainHud(50%))
+=======
+}
+
+body {
+  font-family: "FiraSansCondensed", sans-serif;
+>>>>>>> 0859732 (news(95%))
   font-weight: 400;
   background-color: var(--backgroundColor);
   transition: background-color var(--change-theme-duration);
@@ -73,10 +83,14 @@ body {
 
 button {
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-family: "FiraSansCondensed", sans-serif;
 =======
   font-family: 'FiraSansCondensed', sans-serif;
 >>>>>>> 21c41d1 (MainHud(50%))
+=======
+  font-family: "FiraSansCondensed", sans-serif;
+>>>>>>> 0859732 (news(95%))
 }
 /* логотип  */
 .Logo {

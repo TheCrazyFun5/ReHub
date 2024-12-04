@@ -1,11 +1,12 @@
 <script>
-import Logo from '@/components/ui/logo.vue';
-import themesButton from '@/components/ui/themesButton.vue';
+import Logo from "@/components/ui/logo.vue";
+import themesButton from "@/components/ui/themesButton.vue";
 
 export default {
   data() {
     return {
       showProfileMenu: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
       currentTime: new Date(),
     };
@@ -20,6 +21,16 @@ export default {
   },
 
 >>>>>>> 21c41d1 (MainHud(50%))
+=======
+      currentTime: new Date(),
+    };
+  },
+  mounted() {
+    setInterval(() => {
+      this.currentTime = new Date();
+    }, 1000);
+  },
+>>>>>>> 0859732 (news(95%))
   components: {
     Logo,
     themesButton,
@@ -204,18 +215,24 @@ export default {
       </div>
     </aside>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0859732 (news(95%))
     <div class="right_block">
       <header class="header_info">
         <h2>{{ currentTime }}</h2>
       </header>
       <RouterView class="Content" />
     </div>
+<<<<<<< HEAD
 =======
     <section class="mainContent">
       <h2>up</h2>
       <RouterView />
     </section>
 >>>>>>> 21c41d1 (MainHud(50%))
+=======
+>>>>>>> 0859732 (news(95%))
   </main>
 </template>
 
@@ -239,13 +256,19 @@ svg *[stroke] {
 
   height: 100vh;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0859732 (news(95%))
   /* max-width: 18.7vw; */
   max-width: 360px;
   width: 100%;
   min-width: 252.844px;
+<<<<<<< HEAD
 =======
   width: 18.7vw;
 >>>>>>> 21c41d1 (MainHud(50%))
+=======
+>>>>>>> 0859732 (news(95%))
   padding: 40px 30px;
 
   box-shadow: 0px 0px 11.7px var(--MainShadowColor);
@@ -466,6 +489,20 @@ svg *[stroke] {
   /* height: 87vh; */
 =======
 >>>>>>> 21c41d1 (MainHud(50%))
+}
+
+.right_block {
+  width: 100%;
+  margin-right: 40px;
+  .header_info {
+    margin-top: 38px;
+  }
+}
+
+.Content {
+  margin-top: 40px;
+  overflow: auto;
+  /* height: 87vh; */
 }
 
 h2 {
