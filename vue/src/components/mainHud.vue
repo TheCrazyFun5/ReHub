@@ -1,11 +1,12 @@
 <script>
-import Logo from "@/components/ui/logo.vue";
-import themesButton from "@/components/ui/themesButton.vue";
+import Logo from '@/components/ui/logo.vue';
+import themesButton from '@/components/ui/themesButton.vue';
 
 export default {
   data() {
     return {
       showProfileMenu: false,
+<<<<<<< HEAD
       currentTime: new Date(),
     };
   },
@@ -14,6 +15,11 @@ export default {
       this.currentTime = new Date();
     }, 1000);
   },
+=======
+    };
+  },
+
+>>>>>>> 21c41d1 (MainHud(50%))
   components: {
     Logo,
     themesButton,
@@ -197,12 +203,19 @@ export default {
         </button>
       </div>
     </aside>
+<<<<<<< HEAD
     <div class="right_block">
       <header class="header_info">
         <h2>{{ currentTime }}</h2>
       </header>
       <RouterView class="Content" />
     </div>
+=======
+    <section class="mainContent">
+      <h2>up</h2>
+      <RouterView />
+    </section>
+>>>>>>> 21c41d1 (MainHud(50%))
   </main>
 </template>
 
@@ -225,10 +238,14 @@ svg *[stroke] {
   flex-direction: column;
 
   height: 100vh;
+<<<<<<< HEAD
   /* max-width: 18.7vw; */
   max-width: 360px;
   width: 100%;
   min-width: 252.844px;
+=======
+  width: 18.7vw;
+>>>>>>> 21c41d1 (MainHud(50%))
   padding: 40px 30px;
 
   box-shadow: 0px 0px 11.7px var(--MainShadowColor);
@@ -265,7 +282,11 @@ svg *[stroke] {
     }
 
     .nav_button:hover {
+<<<<<<< HEAD
       background-color: var(--NavButtonBackgroungColor);
+=======
+      background-color: var(--BlueBackgroundLink);
+>>>>>>> 21c41d1 (MainHud(50%))
 
       .nav_button_icon svg *[stroke] {
         stroke: var(--BlueColorText);
@@ -277,7 +298,11 @@ svg *[stroke] {
     }
 
     .router-link-active {
+<<<<<<< HEAD
       background-color: var(--NavButtonBackgroungColor);
+=======
+      background-color: var(--BlueBackgroundLink);
+>>>>>>> 21c41d1 (MainHud(50%))
 
       .nav_button_icon svg *[stroke] {
         stroke: var(--BlueColorText);
@@ -319,7 +344,11 @@ svg *[stroke] {
     }
 
     .profile_menu_button:hover {
+<<<<<<< HEAD
       background-color: var(--NavButtonBackgroungColor);
+=======
+      background-color: var(--BlueBackgroundLink);
+>>>>>>> 21c41d1 (MainHud(50%))
 
       .profile_menu_button_icon svg *[stroke] {
         stroke: var(--BlueColorText);
@@ -357,7 +386,11 @@ svg *[stroke] {
       height: 55px;
       width: 55px;
 
+<<<<<<< HEAD
       border: 1px solid var(--AvatarBorderColor);
+=======
+      border: 1px solid var(--GrayColor);
+>>>>>>> 21c41d1 (MainHud(50%))
       border-radius: 50%;
       box-shadow: 0px 4px 4px var(--MainShadowColor);
     }
@@ -371,7 +404,11 @@ svg *[stroke] {
   }
 
   .profile_button:hover {
+<<<<<<< HEAD
     background-color: var(--NavButtonBackgroungColor);
+=======
+    background-color: var(--BlueBackgroundLink);
+>>>>>>> 21c41d1 (MainHud(50%))
 
     .profile_userName {
       color: var(--BlueColorText);
@@ -392,6 +429,7 @@ svg *[stroke] {
 .slide-menu-leave-to {
   transform: translateY(20px);
   opacity: 0;
+<<<<<<< HEAD
 }
 
 .right_block {
@@ -406,6 +444,8 @@ svg *[stroke] {
   margin-top: 40px;
   overflow: auto;
   /* height: 87vh; */
+=======
+>>>>>>> 21c41d1 (MainHud(50%))
 }
 
 h2 {

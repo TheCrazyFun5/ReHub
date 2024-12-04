@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 @font-face {
-  font-family: "FiraSansCondensed";
-  src: url("/FiraSansCondensed-Regular.ttf");
+  font-family: 'FiraSansCondensed';
+  src: url('/FiraSansCondensed-Regular.ttf');
 }
 :root {
   --backgroundColor: #ffffff;
@@ -17,20 +17,27 @@
   --MainInputColorActiv: rgb(28, 28, 28, 90%);
   --MainShadowColor: rgb(0, 0, 0, 25%);
   --GrayShadowColor: rgb(124, 124, 124, 25%);
+<<<<<<< HEAD
   --NavButtonBackgroungColor: rgb(68, 143, 255, 25%);
   --AvatarBorderColor: rgb(124, 124, 124, 100%);
   --HeaderСolor: #1c1c1c;
   --ColorTextCart: #1c1c1c;
   --ColorTextCartTag: #ffffff;
+=======
+  --BlueColorText: rgb(68, 143, 255, 100%);
+  --BlueBackgroundLink: rgb(68, 143, 255, 25%);
+  --GrayColor: rgb(124, 124, 124, 100%);
+>>>>>>> 21c41d1 (MainHud(50%))
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --backgroundColor: #1c1c1c;
   --ColorTextLogo: #ffffff;
   --MainColorText: #ffffff;
   --MainInputColor: rgb(215, 215, 215, 80%);
   --MainInputColorActiv: rgb(255, 255, 255, 90%);
   --MainShadowColor: rgb(124, 124, 124, 25%);
+<<<<<<< HEAD
   --AvatarBorderColor: rgb(255, 255, 255);
   --HeaderСolor: #d7d7d7;
   --ColorTextCart: #d7d7d7;
@@ -39,6 +46,16 @@
 
 body {
   font-family: "FiraSansCondensed", sans-serif;
+=======
+  --GrayShadowColor: rgb(124, 124, 124, 25%);
+  --BlueColorText: rgb(68, 143, 255, 100%);
+  --BlueBackgroundLink: rgb(68, 143, 255, 25%);
+  --GrayColor: rgb(255, 255, 255);
+}
+
+body {
+  font-family: 'FiraSansCondensed', sans-serif;
+>>>>>>> 21c41d1 (MainHud(50%))
   font-weight: 400;
   background-color: var(--backgroundColor);
   transition: background-color var(--change-theme-duration);
@@ -46,7 +63,11 @@ body {
 }
 
 button {
+<<<<<<< HEAD
   font-family: "FiraSansCondensed", sans-serif;
+=======
+  font-family: 'FiraSansCondensed', sans-serif;
+>>>>>>> 21c41d1 (MainHud(50%))
 }
 /* логотип  */
 .Logo {
@@ -67,6 +88,7 @@ button {
   color: var(--MainColorText);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 *::selection {
   background-color: var(--NavButtonBackgroungColor);
@@ -74,3 +96,10 @@ button {
 }
 =======
 >>>>>>> baf1d07 (Component(Input) loginIn(98%))
+=======
+
+*::selection {
+  background-color: var(--BlueBackgroundLink);
+  color: var(--BlueColorText);
+}
+>>>>>>> 21c41d1 (MainHud(50%))
