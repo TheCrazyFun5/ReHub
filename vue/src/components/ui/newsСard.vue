@@ -1,9 +1,14 @@
 <script>
+import gg from "@/components/ui/modalNewsWindow.vue";
 export default {
   data() {
     return {
       tag: false,
+      open: false,
     };
+  },
+  components: {
+    gg,
   },
   props: {
     data1: {
@@ -26,7 +31,8 @@ export default {
 };
 </script>
 <template>
-  <div class="card">
+  <gg :data="data1" :open1="open" @close="open = false" />
+  <div @click="open = true" class="card">
     <div v-if="tag" class="card__teg-new"><p>Новое</p></div>
     <div class="card__content" :class="{ card__contentPading: !tag }">
       <header class="card__header">

@@ -25,6 +25,7 @@
   --ColorTextCart: #1c1c1c;
   --ColorTextCartTag: #ffffff;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   --BlueColorText: rgb(68, 143, 255, 100%);
   --BlueBackgroundLink: rgb(68, 143, 255, 25%);
@@ -36,6 +37,10 @@
 >>>>>>> f379102 (Small Refactoring Colors Variables)
 =======
 >>>>>>> 0859732 (news(95%))
+=======
+  --backgroundColorModal: rgb(0, 0, 0, 50%);
+  --backgroundColorModalPanel: #ffffff;
+>>>>>>> 54f1969 (news(100%))
 }
 
 [data-theme="dark"] {
@@ -52,6 +57,11 @@
   --ColorTextCart: #d7d7d7;
   --ColorTextCartTag: #d7d7d7;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  --backgroundColorModal: rgb(84, 84, 84, 50%);
+  --backgroundColorModalPanel: #292929;
+>>>>>>> 54f1969 (news(100%))
 }
 
 body {

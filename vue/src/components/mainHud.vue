@@ -60,7 +60,7 @@ export default {
 </script>
 
 <template>
-  <main class="main">
+  <main class="main" @click="ff">
     <aside class="leftMenu">
       <div class="header">
         <Logo />
