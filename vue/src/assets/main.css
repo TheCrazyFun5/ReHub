@@ -22,6 +22,8 @@
   --HeaderСolor: #1c1c1c;
   --ColorTextCart: #1c1c1c;
   --ColorTextCartTag: #ffffff;
+  --backgroundColorModal: rgb(0, 0, 0, 50%);
+  --backgroundColorModalPanel: #ffffff;
 }
 
 [data-theme="dark"] {
@@ -35,6 +37,8 @@
   --HeaderСolor: #d7d7d7;
   --ColorTextCart: #d7d7d7;
   --ColorTextCartTag: #d7d7d7;
+  --backgroundColorModal: rgb(84, 84, 84, 50%);
+  --backgroundColorModalPanel: #292929;
 }
 
 body {
