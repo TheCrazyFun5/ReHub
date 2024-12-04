@@ -12,7 +12,7 @@ import shift from "@/pages/shift.vue";
 import chats from "@/pages/chats.vue";
 import accounting from "@/pages/accounting.vue";
 import loginIn from "@/pages/loginIn.vue";
-import NotFound from "@/pages/NotFound.vue";
+import NotFound from "@/pages/notFound.vue";
 
 //описание маршрутов
 const routes = [
