@@ -255,7 +255,7 @@ svg *[stroke] {
     }
 
     .nav_button:hover {
-      background-color: var(--BlueBackgroundLink);
+      background-color: var(--NavButtonBackgroungColor);
 
       .nav_button_icon svg *[stroke] {
         stroke: var(--BlueColorText);
@@ -267,7 +267,7 @@ svg *[stroke] {
     }
 
     .router-link-active {
-      background-color: var(--BlueBackgroundLink);
+      background-color: var(--NavButtonBackgroungColor);
 
       .nav_button_icon svg *[stroke] {
         stroke: var(--BlueColorText);
@@ -309,7 +309,7 @@ svg *[stroke] {
     }
 
     .profile_menu_button:hover {
-      background-color: var(--BlueBackgroundLink);
+      background-color: var(--NavButtonBackgroungColor);
 
       .profile_menu_button_icon svg *[stroke] {
         stroke: var(--BlueColorText);
@@ -347,7 +347,7 @@ svg *[stroke] {
       height: 55px;
       width: 55px;
 
-      border: 1px solid var(--GrayColor);
+      border: 1px solid var(--AvatarBorderColor);
       border-radius: 50%;
       box-shadow: 0px 4px 4px var(--MainShadowColor);
     }
@@ -361,7 +361,7 @@ svg *[stroke] {
   }
 
   .profile_button:hover {
-    background-color: var(--BlueBackgroundLink);
+    background-color: var(--NavButtonBackgroungColor);
 
     .profile_userName {
       color: var(--BlueColorText);
