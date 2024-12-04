@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 @font-face {
-  font-family: 'FiraSansCondensed';
-  src: url('/FiraSansCondensed-Regular.ttf');
+  font-family: "FiraSansCondensed";
+  src: url("/FiraSansCondensed-Regular.ttf");
 }
 :root {
   --backgroundColor: #ffffff;
@@ -19,9 +19,12 @@
   --GrayShadowColor: rgb(124, 124, 124, 25%);
   --NavButtonBackgroungColor: rgb(68, 143, 255, 25%);
   --AvatarBorderColor: rgb(124, 124, 124, 100%);
+  --HeaderСolor: #1c1c1c;
+  --ColorTextCart: #1c1c1c;
+  --ColorTextCartTag: #ffffff;
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   --backgroundColor: #1c1c1c;
   --ColorTextLogo: #ffffff;
   --MainColorText: #ffffff;
@@ -29,10 +32,13 @@
   --MainInputColorActiv: rgb(255, 255, 255, 90%);
   --MainShadowColor: rgb(124, 124, 124, 25%);
   --AvatarBorderColor: rgb(255, 255, 255);
+  --HeaderСolor: #d7d7d7;
+  --ColorTextCart: #d7d7d7;
+  --ColorTextCartTag: #d7d7d7;
 }
 
 body {
-  font-family: 'FiraSansCondensed', sans-serif;
+  font-family: "FiraSansCondensed", sans-serif;
   font-weight: 400;
   background-color: var(--backgroundColor);
   transition: background-color var(--change-theme-duration);
@@ -40,7 +46,7 @@ body {
 }
 
 button {
-  font-family: 'FiraSansCondensed', sans-serif;
+  font-family: "FiraSansCondensed", sans-serif;
 }
 /* логотип  */
 .Logo {
