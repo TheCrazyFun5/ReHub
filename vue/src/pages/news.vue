@@ -41,6 +41,42 @@ export default {
           minText: "Описание",
           maxText: "Описание",
         },
+        {
+          title: "Уважаемые коллеги и партнеры!4",
+          date: "1.12.2024",
+          minText: "Описание",
+          maxText: "Описание",
+        },
+        {
+          title: "Уважаемые коллеги и партнеры!4",
+          date: "1.12.2024",
+          minText: "Описание",
+          maxText: "Описание",
+        },
+        {
+          title: "Уважаемые коллеги и партнеры!4",
+          date: "1.12.2024",
+          minText: "Описание",
+          maxText: "Описание",
+        },
+        {
+          title: "Уважаемые коллеги и партнеры!4",
+          date: "1.12.2024",
+          minText: "Описание",
+          maxText: "Описание",
+        },
+        {
+          title: "Уважаемые коллеги и партнеры!4",
+          date: "1.12.2024",
+          minText: "Описание",
+          maxText: "Описание",
+        },
+        {
+          title: "Уважаемые коллеги и партнеры!4",
+          date: "1.12.2024",
+          minText: "Описание",
+          maxText: "Описание",
+        },
       ],
       currentTime: new Date(),
     };
@@ -78,7 +114,8 @@ h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   gap: 20px;
+  padding: 2px;
 }
 </style>

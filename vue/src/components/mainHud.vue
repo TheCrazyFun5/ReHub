@@ -524,6 +524,7 @@ svg *[stroke] {
 .Content {
   margin-top: 40px;
   overflow: auto;
+<<<<<<< HEAD
   /* height: 87vh; */
 =======
 >>>>>>> 21c41d1 (MainHud(50%))
@@ -579,6 +580,9 @@ svg *[stroke] {
   margin-top: 40px;
   /* overflow: auto; */
   /* height: 792px; */
+=======
+  height: 87vh;
+>>>>>>> 54baa87 (news(99%))
 }
 
 h2 {

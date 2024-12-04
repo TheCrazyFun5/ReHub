@@ -32,13 +32,14 @@ export default {
       <header class="card__header">
         <h3>{{ data1.title }}</h3>
       </header>
-
-      <main class="card__text">
-        <p v-html="data1.minText"></p>
-      </main>
-      <footer class="card__footer">
-        <h4>Дата публикации: {{ data1.date }}</h4>
-      </footer>
+      <div class="card__mainAndFotter-flex">
+        <main class="card__text">
+          <p v-html="data1.minText"></p>
+        </main>
+        <footer class="card__footer">
+          <h4>Дата публикации: {{ data1.date }}</h4>
+        </footer>
+      </div>
     </div>
   </div>
 </template>
@@ -89,14 +90,20 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 30px;
+  gap: 60px;
   .card__header {
     text-align: center;
     font-size: 24px;
     font-weight: 500;
   }
 }
-
+.card__mainAndFotter-flex {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
 .card__contentPading {
   padding-top: 30px;
 }
