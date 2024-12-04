@@ -1,0 +1,24 @@
+ReHub/
+├─ node_modules/            # Общие зависимости
+├─ server/                  # Папка сервера
+│   ├─ module/              # Серверные модули
+│   ├─ Public/              # Папка для build vue
+│   ├─ Router/              # Папка с Маршрутизации 
+│   ┖ app.js                # Основной файл сервера
+├─ vue/                     # Папка с проектом Vue для разработки frontend
+│   ├─ .vscode/             # Настройки рабочего пространства VSCode
+│   ├─ public/              # Статические файлы Vue
+│   ├─ src/                 # Исходный код Vue
+│   │   ├─ assets/          # Папка с CSS и IMG файлами
+│   │   ├─ components/      # Папка с компонентами
+│   │   │    ├─ ui/         # Папка с ui компонентами
+│   │   ├─ modules/         # Папка с модулями
+│   │   ├─ pages/           # Папка со страницами
+│   │   ├─ App.vue          # Основной компонент страницы
+│   │   ┖ main.js           # Основной скрипт Vue
+│   ├─ index.html           # Главный файл страницы Vue
+│   ├─ jsconfig.json        # Конфигурация для автодополнения
+│   ┖ vite.config.js        # Конфигурация Vite
+├─ architecture             # Файл с архитектурой проекта
+├─ package-lock.json        # Общий lock-package.json
+┖  package.json             # Общий package.json
