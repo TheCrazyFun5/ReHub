@@ -283,10 +283,14 @@ svg *[stroke] {
 
     .nav_button:hover {
 <<<<<<< HEAD
+<<<<<<< HEAD
       background-color: var(--NavButtonBackgroungColor);
 =======
       background-color: var(--BlueBackgroundLink);
 >>>>>>> 21c41d1 (MainHud(50%))
+=======
+      background-color: var(--NavButtonBackgroungColor);
+>>>>>>> f379102 (Small Refactoring Colors Variables)
 
       .nav_button_icon svg *[stroke] {
         stroke: var(--BlueColorText);
@@ -299,10 +303,14 @@ svg *[stroke] {
 
     .router-link-active {
 <<<<<<< HEAD
+<<<<<<< HEAD
       background-color: var(--NavButtonBackgroungColor);
 =======
       background-color: var(--BlueBackgroundLink);
 >>>>>>> 21c41d1 (MainHud(50%))
+=======
+      background-color: var(--NavButtonBackgroungColor);
+>>>>>>> f379102 (Small Refactoring Colors Variables)
 
       .nav_button_icon svg *[stroke] {
         stroke: var(--BlueColorText);
@@ -345,10 +353,14 @@ svg *[stroke] {
 
     .profile_menu_button:hover {
 <<<<<<< HEAD
+<<<<<<< HEAD
       background-color: var(--NavButtonBackgroungColor);
 =======
       background-color: var(--BlueBackgroundLink);
 >>>>>>> 21c41d1 (MainHud(50%))
+=======
+      background-color: var(--NavButtonBackgroungColor);
+>>>>>>> f379102 (Small Refactoring Colors Variables)
 
       .profile_menu_button_icon svg *[stroke] {
         stroke: var(--BlueColorText);
@@ -387,10 +399,14 @@ svg *[stroke] {
       width: 55px;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       border: 1px solid var(--AvatarBorderColor);
 =======
       border: 1px solid var(--GrayColor);
 >>>>>>> 21c41d1 (MainHud(50%))
+=======
+      border: 1px solid var(--AvatarBorderColor);
+>>>>>>> f379102 (Small Refactoring Colors Variables)
       border-radius: 50%;
       box-shadow: 0px 4px 4px var(--MainShadowColor);
     }
@@ -405,10 +421,14 @@ svg *[stroke] {
 
   .profile_button:hover {
 <<<<<<< HEAD
+<<<<<<< HEAD
     background-color: var(--NavButtonBackgroungColor);
 =======
     background-color: var(--BlueBackgroundLink);
 >>>>>>> 21c41d1 (MainHud(50%))
+=======
+    background-color: var(--NavButtonBackgroungColor);
+>>>>>>> f379102 (Small Refactoring Colors Variables)
 
     .profile_userName {
       color: var(--BlueColorText);

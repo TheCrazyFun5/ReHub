@@ -18,6 +18,7 @@
   --MainShadowColor: rgb(0, 0, 0, 25%);
   --GrayShadowColor: rgb(124, 124, 124, 25%);
 <<<<<<< HEAD
+<<<<<<< HEAD
   --NavButtonBackgroungColor: rgb(68, 143, 255, 25%);
   --AvatarBorderColor: rgb(124, 124, 124, 100%);
   --HeaderСolor: #1c1c1c;
@@ -28,6 +29,10 @@
   --BlueBackgroundLink: rgb(68, 143, 255, 25%);
   --GrayColor: rgb(124, 124, 124, 100%);
 >>>>>>> 21c41d1 (MainHud(50%))
+=======
+  --NavButtonBackgroungColor: rgb(68, 143, 255, 25%);
+  --AvatarBorderColor: rgb(124, 124, 124, 100%);
+>>>>>>> f379102 (Small Refactoring Colors Variables)
 }
 
 [data-theme='dark'] {
@@ -37,6 +42,7 @@
   --MainInputColor: rgb(215, 215, 215, 80%);
   --MainInputColorActiv: rgb(255, 255, 255, 90%);
   --MainShadowColor: rgb(124, 124, 124, 25%);
+<<<<<<< HEAD
 <<<<<<< HEAD
   --AvatarBorderColor: rgb(255, 255, 255);
   --HeaderСolor: #d7d7d7;
@@ -51,6 +57,9 @@ body {
   --BlueColorText: rgb(68, 143, 255, 100%);
   --BlueBackgroundLink: rgb(68, 143, 255, 25%);
   --GrayColor: rgb(255, 255, 255);
+=======
+  --AvatarBorderColor: rgb(255, 255, 255);
+>>>>>>> f379102 (Small Refactoring Colors Variables)
 }
 
 body {
@@ -99,7 +108,7 @@ button {
 =======
 
 *::selection {
-  background-color: var(--BlueBackgroundLink);
+  background-color: var(--NavButtonBackgroungColor);
   color: var(--BlueColorText);
 }
 >>>>>>> 21c41d1 (MainHud(50%))
