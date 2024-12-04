@@ -405,7 +405,7 @@ svg *[stroke] {
 .Content {
   margin-top: 40px;
   overflow: auto;
-  /* height: 87vh; */
+  height: 87vh;
 }
 
 h2 {
