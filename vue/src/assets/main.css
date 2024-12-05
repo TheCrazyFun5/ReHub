@@ -24,6 +24,7 @@
   --ColorTextCartTag: #ffffff;
   --backgroundColorModal: rgb(0, 0, 0, 50%);
   --backgroundColorModalPanel: #ffffff;
+  --ColorButtonClose: #7c7c7c;
 }
 
 [data-theme="dark"] {
@@ -39,6 +40,7 @@
   --ColorTextCartTag: #d7d7d7;
   --backgroundColorModal: rgb(84, 84, 84, 50%);
   --backgroundColorModalPanel: #292929;
+  --ColorButtonClose: #ffffff;
 }
 
 body {

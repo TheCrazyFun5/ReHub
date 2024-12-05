@@ -1,11 +1,11 @@
 <script>
-import clos from "@/components/ui/buttonCloseModal.vue";
+import buttonCloseModal from "@/components/ui/buttonCloseModal.vue";
 export default {
   components: {
-    clos,
+    buttonCloseModal,
   },
   props: {
-    open1: {
+    visibility: {
       type: Boolean,
       required: true,
     },
@@ -19,13 +19,12 @@ export default {
 </script>
 
 <template>
-  <Teleport :disabled="!open1" to="body">
-    <div v-if="open1" class="modalBC" @click.self="$emit('close')">
+  <Teleport :disabled="!visibility" to="body">
+    <div v-if="visibility" class="modalBC" @click.self="$emit('close')">
       <div class="modal">
         <header class="modal__header">
           <h2>{{ data.title }}</h2>
-          <clos />
-          <button @click="$emit('close')">X</button>
+          <buttonCloseModal @click="$emit('close')" />
         </header>
         <main v-html="data.maxText" class="modal__main"></main>
         <footer class="modal__footer">Дата публикации: {{ data.date }}</footer>
@@ -55,6 +54,7 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
     h2 {
       font-size: 48px;
       font-weight: 500;
