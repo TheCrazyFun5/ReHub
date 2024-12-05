@@ -60,7 +60,7 @@ export default {
 </script>
 
 <template>
-  <main class="main" @click="ff">
+  <main class="main">
     <aside class="leftMenu">
       <div class="header">
         <Logo />
@@ -260,7 +260,7 @@ export default {
           <blueButton>Начать смену</blueButton>
         </div>
       </div>
-      <RouterView class="Content" />
+      <RouterView class="content" />
     </div>
 <<<<<<< HEAD
 =======
@@ -281,18 +281,17 @@ svg *[stroke] {
 }
 
 .main {
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 18.7% 1fr;
   column-gap: 40px;
-
-  width: 100%;
 }
 
 .leftMenu {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
 
   height: 100vh;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -307,6 +306,8 @@ svg *[stroke] {
 >>>>>>> 21c41d1 (MainHud(50%))
 =======
 >>>>>>> 0859732 (news(95%))
+=======
+>>>>>>> f7404f8 (MainHud On Grids)
   padding: 40px 30px;
 
   box-shadow: 0px 0px 11.7px var(--MainShadowColor);
@@ -325,7 +326,6 @@ svg *[stroke] {
 
     .nav_button {
       display: flex;
-
       gap: 15px;
       align-items: center;
 
@@ -529,16 +529,21 @@ svg *[stroke] {
 =======
 >>>>>>> 21c41d1 (MainHud(50%))
 }
+/* Конец анимаций */
 
 .right_block {
-  width: 100%;
-  margin-right: 40px;
+  display: grid;
+  grid-template-rows: 10% 1fr;
+
+  max-height: 100vh;
+  padding-right: 40px;
+
   .header_info {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    margin-top: 38px;
+    margin-top: 40px;
 
     .header_info_currentDate {
       font-size: 24px;
@@ -576,8 +581,9 @@ svg *[stroke] {
   }
 }
 
-.Content {
+.content {
   margin-top: 40px;
+<<<<<<< HEAD
   /* overflow: auto; */
   /* height: 792px; */
 =======
@@ -590,5 +596,10 @@ h2 {
   color: yellow;
   border: 1px solid yellow;
   width: 100%;
+=======
+  padding-bottom: 40px;
+  /* width: 100%; */
+  overflow: auto;
+>>>>>>> f7404f8 (MainHud On Grids)
 }
 </style>

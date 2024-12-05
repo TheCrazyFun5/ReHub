@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 @font-face {
-  font-family: "FiraSansCondensed";
-  src: url("/FiraSansCondensed-Regular.ttf");
+  font-family: 'FiraSansCondensed';
+  src: url('/FiraSansCondensed-Regular.ttf');
 }
 :root {
   --backgroundColor: #ffffff;
@@ -47,7 +47,7 @@
 >>>>>>> 4cf291b (ComponentModalNewsWindow(100%))
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --backgroundColor: #1c1c1c;
   --ColorTextLogo: #ffffff;
   --MainColorText: #ffffff;
@@ -73,6 +73,7 @@
 }
 
 body {
+<<<<<<< HEAD
   font-family: "FiraSansCondensed", sans-serif;
 =======
   --GrayShadowColor: rgb(124, 124, 124, 25%);
@@ -93,6 +94,9 @@ body {
 body {
   font-family: "FiraSansCondensed", sans-serif;
 >>>>>>> 0859732 (news(95%))
+=======
+  font-family: 'FiraSansCondensed', sans-serif;
+>>>>>>> f7404f8 (MainHud On Grids)
   font-weight: 400;
   background-color: var(--backgroundColor);
   transition: background-color var(--change-theme-duration);
@@ -102,6 +106,7 @@ body {
 button {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-family: "FiraSansCondensed", sans-serif;
 =======
   font-family: 'FiraSansCondensed', sans-serif;
@@ -109,6 +114,9 @@ button {
 =======
   font-family: "FiraSansCondensed", sans-serif;
 >>>>>>> 0859732 (news(95%))
+=======
+  font-family: 'FiraSansCondensed', sans-serif;
+>>>>>>> f7404f8 (MainHud On Grids)
 }
 /* логотип  */
 .Logo {
