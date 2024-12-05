@@ -40,7 +40,11 @@
 =======
   --backgroundColorModal: rgb(0, 0, 0, 50%);
   --backgroundColorModalPanel: #ffffff;
+<<<<<<< HEAD
 >>>>>>> 54f1969 (news(100%))
+=======
+  --ColorButtonClose: #7c7c7c;
+>>>>>>> 4cf291b (ComponentModalNewsWindow(100%))
 }
 
 [data-theme="dark"] {
@@ -61,7 +65,11 @@
 =======
   --backgroundColorModal: rgb(84, 84, 84, 50%);
   --backgroundColorModalPanel: #292929;
+<<<<<<< HEAD
 >>>>>>> 54f1969 (news(100%))
+=======
+  --ColorButtonClose: #ffffff;
+>>>>>>> 4cf291b (ComponentModalNewsWindow(100%))
 }
 
 body {

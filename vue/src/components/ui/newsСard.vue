@@ -1,5 +1,5 @@
 <script>
-import gg from "@/components/ui/modalNewsWindow.vue";
+import modalNewsWindow from "@/components/ui/modalNewsWindow.vue";
 export default {
   data() {
     return {
@@ -8,16 +8,16 @@ export default {
     };
   },
   components: {
-    gg,
+    modalNewsWindow,
   },
   props: {
-    data1: {
+    dataItem: {
       type: Object,
       default: { title: "title", date: "2.12.2024", minText: "Описание", maxText: "Описание" },
     },
   },
   created() {
-    let dateNewstemp = this.data1.date;
+    let dateNewstemp = this.dataItem.date;
     let dateNews = dateNewstemp.split(".");
     let newDate = new Date();
     if (newDate.getFullYear() === Number(dateNews[2])) {
@@ -31,19 +31,19 @@ export default {
 };
 </script>
 <template>
-  <gg :data="data1" :open1="open" @close="open = false" />
+  <modalNewsWindow :data="dataItem" :visibility="open" @close="open = false" />
   <div @click="open = true" class="card">
     <div v-if="tag" class="card__teg-new"><p>Новое</p></div>
     <div class="card__content" :class="{ card__contentPading: !tag }">
       <header class="card__header">
-        <h3>{{ data1.title }}</h3>
+        <h3>{{ dataItem.title }}</h3>
       </header>
       <div class="card__mainAndFotter-flex">
         <main class="card__text">
-          <p v-html="data1.minText"></p>
+          <p v-html="dataItem.minText"></p>
         </main>
         <footer class="card__footer">
-          <h4>Дата публикации: {{ data1.date }}</h4>
+          <h4>Дата публикации: {{ dataItem.date }}</h4>
         </footer>
       </div>
     </div>
