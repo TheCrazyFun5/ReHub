@@ -1,5 +1,5 @@
 <script>
-import buttonCloseModal from "@/components/ui/buttonCloseModal.vue";
+import buttonCloseModal from '@/components/ui/buttonCloseModal.vue';
 export default {
   components: {
     buttonCloseModal,
@@ -14,7 +14,7 @@ export default {
       required: true,
     },
   },
-  emits: ["close"],
+  emits: ['close'],
 };
 </script>
 

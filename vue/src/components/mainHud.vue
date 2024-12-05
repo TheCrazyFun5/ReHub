@@ -36,7 +36,7 @@ export default {
 </script>
 
 <template>
-  <main class="main" @click="ff">
+  <main class="main">
     <aside class="leftMenu">
       <div class="header">
         <Logo />
@@ -232,7 +232,7 @@ export default {
           <blueButton>Начать смену</blueButton>
         </div>
       </div>
-      <RouterView class="Content" />
+      <RouterView class="content" />
     </div>
   </main>
 </template>
@@ -244,22 +244,16 @@ svg *[stroke] {
 }
 
 .main {
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 18.7% 1fr;
   column-gap: 40px;
-
-  width: 100%;
 }
 
 .leftMenu {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
 
   height: 100vh;
-  /* max-width: 18.7vw; */
-  max-width: 360px;
-  width: 100%;
-  min-width: 252.844px;
   padding: 40px 30px;
 
   box-shadow: 0px 0px 11.7px var(--MainShadowColor);
@@ -278,7 +272,6 @@ svg *[stroke] {
 
     .nav_button {
       display: flex;
-
       gap: 15px;
       align-items: center;
 
@@ -424,16 +417,21 @@ svg *[stroke] {
   transform: translateY(20px);
   opacity: 0;
 }
+/* Конец анимаций */
 
 .right_block {
-  width: 100%;
-  margin-right: 40px;
+  display: grid;
+  grid-template-rows: 10% 1fr;
+
+  max-height: 100vh;
+  padding-right: 40px;
+
   .header_info {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    margin-top: 38px;
+    margin-top: 40px;
 
     .header_info_currentDate {
       font-size: 24px;
@@ -471,16 +469,10 @@ svg *[stroke] {
   }
 }
 
-.Content {
+.content {
   margin-top: 40px;
+  padding-bottom: 40px;
+  /* width: 100%; */
   overflow: auto;
-  height: 87vh;
-}
-
-h2 {
-  font-size: 30px;
-  color: yellow;
-  border: 1px solid yellow;
-  width: 100%;
 }
 </style>
