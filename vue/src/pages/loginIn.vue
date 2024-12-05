@@ -1,8 +1,9 @@
 <script>
-import themesButton from '@/components/ui/themesButton.vue';
-import Logo from '@/components/ui/logo.vue';
-import mainInput from '@/components/ui/mainInput.vue';
-import blueButton from '@/components/ui/blueButton.vue';
+import axios from "axios";
+import themesButton from "@/components/ui/themesButton.vue";
+import Logo from "@/components/ui/logo.vue";
+import mainInput from "@/components/ui/mainInput.vue";
+import blueButton from "@/components/ui/blueButton.vue";
 export default {
   components: {
     Logo,
@@ -12,11 +13,20 @@ export default {
   },
   data() {
     return {
-      login: '',
-      password: '',
+      login: "",
+      password: "",
     };
   },
-  methods: {},
+  methods: {
+    testOx() {
+      axios
+        .post("/api/t", {
+          ddd: "dd",
+        })
+        .then((response) => console.log(response.data))
+        .catch((error) => console.error(error));
+    },
+  },
 };
 </script>
 
@@ -30,7 +40,7 @@ export default {
           <mainInput paceholder="Логин" id="Login" @back="(value) => (login = value)" />
           <mainInput type="Password" paceholder="Пароль" id="Password" @back="(value) => (password = value)" />
         </div>
-        <blueButton class="button">Вход</blueButton>
+        <blueButton @click="testOx()" class="button">Вход</blueButton>
       </div>
     </main>
     <footer className="footer__loginIn">

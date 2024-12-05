@@ -4,13 +4,12 @@ const cors = require("cors");
 const router = require("./Router/index");
 const app = express();
 
-app.use(cors({ origin: "*" }));
-app.use(router);
+app.use(express.json());
+// app.use(cors({ origin: "*" }));
 
 // Раздача статических файлов из папки Public
-// app.use(express.static(path.join(__dirname, "Public")));
-
-// Маршрутизация: отправка index.html для всех запросов
+app.use(express.static(path.join(__dirname, "Public")));
+app.use(router);
 
 // Запуск сервера
 const PORT = process.env.PORT || 3000;
