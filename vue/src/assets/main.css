@@ -13,7 +13,17 @@
   --ColorTextLogo: #1c1c1c;
   --MainColorText: #1c1c1c;
   --MainInputColor: rgb(124, 124, 124, 70%);
+  --BlueColorText: rgb(68, 143, 255, 100%);
   --MainInputColorActiv: rgb(28, 28, 28, 90%);
+  --MainShadowColor: rgb(0, 0, 0, 25%);
+  --GrayShadowColor: rgb(124, 124, 124, 25%);
+  --NavButtonBackgroungColor: rgb(68, 143, 255, 25%);
+  --AvatarBorderColor: rgb(124, 124, 124, 100%);
+  --HeaderСolor: #1c1c1c;
+  --ColorTextCart: #1c1c1c;
+  --ColorTextCartTag: #ffffff;
+  --backgroundColorModal: rgb(0, 0, 0, 50%);
+  --backgroundColorModalPanel: #ffffff;
 }
 
 [data-theme="dark"] {
@@ -22,13 +32,25 @@
   --MainColorText: #ffffff;
   --MainInputColor: rgb(215, 215, 215, 80%);
   --MainInputColorActiv: rgb(255, 255, 255, 90%);
+  --MainShadowColor: rgb(124, 124, 124, 25%);
+  --AvatarBorderColor: rgb(255, 255, 255);
+  --HeaderСolor: #d7d7d7;
+  --ColorTextCart: #d7d7d7;
+  --ColorTextCartTag: #d7d7d7;
+  --backgroundColorModal: rgb(84, 84, 84, 50%);
+  --backgroundColorModalPanel: #292929;
 }
 
 body {
-  font-family: "FiraSansCondensed";
+  font-family: "FiraSansCondensed", sans-serif;
   font-weight: 400;
   background-color: var(--backgroundColor);
   transition: background-color var(--change-theme-duration);
+  overflow: hidden;
+}
+
+button {
+  font-family: "FiraSansCondensed", sans-serif;
 }
 /* логотип  */
 .Logo {
@@ -48,19 +70,8 @@ body {
 .mainColorText {
   color: var(--MainColorText);
 }
-.MainInputColor {
-  color: var(--MainInputColor);
-  border-color: var(--MainInputColor);
-  background-color: transparent;
-}
 
-.MainInputColor:focus {
-  color: var(--MainInputColorActiv);
-  border-color: var(--MainInputColorActiv);
-}
-.MainInput::placeholder {
-  color: var(--MainInputColor);
-}
-.placeholderAnim {
-  color: var(--MainInputColorActiv);
+*::selection {
+  background-color: var(--NavButtonBackgroungColor);
+  color: var(--BlueColorText);
 }

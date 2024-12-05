@@ -1,5 +1,5 @@
 <script>
-import logo from "@/assets/img/Logo.svg";
+import logo from "@/assets/img/logo.svg";
 
 export default {
   data() {
