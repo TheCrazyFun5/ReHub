@@ -1,17 +1,19 @@
 <script>
-import themesButton from "@/components/ui/themesButton.vue";
-import Logo from "@/components/ui/logo.vue";
-import mainInput from "@/components/ui/mainInput.vue";
+import themesButton from '@/components/ui/themesButton.vue';
+import Logo from '@/components/ui/logo.vue';
+import mainInput from '@/components/ui/mainInput.vue';
+import blueButton from '@/components/ui/blueButton.vue';
 export default {
   components: {
     Logo,
     mainInput,
     themesButton,
+    blueButton,
   },
   data() {
     return {
-      login: "",
-      password: "",
+      login: '',
+      password: '',
     };
   },
   methods: {},
@@ -28,9 +30,14 @@ export default {
           <mainInput paceholder="Логин" id="Login" @back="(value) => (login = value)" />
           <mainInput type="Password" paceholder="Пароль" id="Password" @back="(value) => (password = value)" />
         </div>
+        <blueButton class="button">Вход</blueButton>
       </div>
     </main>
-    <footer className="footer__loginIn"><themesButton /> <Logo /> <br /></footer>
+    <footer className="footer__loginIn">
+      <themesButton />
+      <Logo />
+      <br />
+    </footer>
   </section>
 </template>
 
@@ -70,5 +77,10 @@ main {
   display: flex;
   gap: 25px;
   flex-direction: column;
+}
+
+.button {
+  padding: 15px 80px;
+  margin-top: 40px;
 }
 </style>
