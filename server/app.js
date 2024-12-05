@@ -1,18 +1,20 @@
 const express = require("express");
 const path = require("path");
-
+const cors = require("cors");
+const router = require("./Router/index");
 const app = express();
 
-// Раздача статических файлов из папки dist
-app.use(express.static(path.join(__dirname, "Public")));
+app.use(cors({ origin: "*" }));
+app.use(router);
+
+// Раздача статических файлов из папки Public
+// app.use(express.static(path.join(__dirname, "Public")));
 
 // Маршрутизация: отправка index.html для всех запросов
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "Public", "index.html"));
-});
 
 // Запуск сервера
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+const host = "127.0.0.1";
+app.listen(PORT, host, () => {
+  console.log(`http://${host}:${PORT}`);
 });
