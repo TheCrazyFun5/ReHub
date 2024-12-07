@@ -1,18 +1,13 @@
-import {
-  createMemoryHistory,
-  createRouter,
-  createWebHashHistory,
-  createWebHistory,
-} from "vue-router";
+import { createMemoryHistory, createRouter, createWebHashHistory, createWebHistory } from "vue-router";
 import VueCookies from "vue-cookies";
-
+import axios from "axios";
 //импорт страниц
 import news from "@/pages/news.vue";
 import shift from "@/pages/shift.vue";
 import chats from "@/pages/chats.vue";
 import accounting from "@/pages/accounting.vue";
 import loginIn from "@/pages/loginIn.vue";
-import NotFound from "@/pages/notFound.vue";
+import NotFound from "@/pages/NotFound.vue";
 
 //описание маршрутов
 const routes = [
@@ -29,18 +24,23 @@ const router = createRouter({
   routes,
 });
 
-function isAuth() {
-  if (VueCookies.isKey("auth")) {
-    console.log(VueCookies.get("auth"));
-    return true;
-  }
-  return false;
+async function isAuth() {
+  let f = false;
+  await axios
+    .post("/api/authenticateToken")
+    .then((response) => {
+      f = response.data.isToken;
+    })
+    .catch((error) => console.error(error));
+  return f;
 }
 
 router.beforeEach(async (to, from, next) => {
-  if (to.path !== "/loginIn" && !isAuth()) {
+  let isAuthToken = false;
+  isAuthToken = await isAuth();
+  if (to.path !== "/loginIn" && !isAuthToken) {
     next({ name: "loginIn" });
-  } else if (to.path === "/loginIn" && isAuth()) {
+  } else if (to.path === "/loginIn" && isAuthToken) {
     next({ name: "news" });
   } else {
     next();
