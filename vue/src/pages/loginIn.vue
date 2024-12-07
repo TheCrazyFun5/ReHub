@@ -15,16 +15,24 @@ export default {
     return {
       login: "",
       password: "",
+      error: "",
     };
   },
   methods: {
-    testOx() {
-      axios
-        .post("/api/t", {
-          ddd: "dd",
-        })
-        .then((response) => console.log(response.data))
-        .catch((error) => console.error(error));
+    loginIn() {
+      this.error = "";
+      if (this.login.length > 1 && this.password.length > 1) {
+        axios
+          .post("/api/user/loginIn", {
+            login: this.login,
+            password: this.password,
+          })
+          .then((response) => {
+            if (response.data.success) window.location.href = "/";
+            if (response.data.error) this.error = response.data.error;
+          })
+          .catch((error) => console.error(error));
+      }
     },
   },
 };
@@ -40,7 +48,10 @@ export default {
           <mainInput paceholder="Логин" id="Login" @back="(value) => (login = value)" />
           <mainInput type="Password" paceholder="Пароль" id="Password" @back="(value) => (password = value)" />
         </div>
-        <blueButton @click="testOx()" class="button">Вход</blueButton>
+        <blueButton :disabled="login.length < 1 || password.length < 1" @click="loginIn()" class="button">
+          Вход
+        </blueButton>
+        <div class="error">{{ error }}</div>
       </div>
     </main>
     <footer className="footer__loginIn">
@@ -52,6 +63,10 @@ export default {
 </template>
 
 <style scoped>
+.error {
+  margin-top: 30px;
+  color: rgb(255, 21, 91, 90%);
+}
 section.loginIn {
   height: 100vh;
   display: flex;
