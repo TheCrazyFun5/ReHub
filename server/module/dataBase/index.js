@@ -1,10 +1,10 @@
 const Sequelize = require("sequelize");
 
 //данные для БД
-const database = "ReHub";
-const username = "root";
-const password = "";
-const host = "127.0.0.1";
+const database = "sql7750517";
+const username = "sql7750517";
+const password = "aDF4jw9zeR";
+const host = "sql7.freemysqlhosting.net";
 const dialect = "mysql";
 
 const sequelize = new Sequelize(database, username, password, {
@@ -15,6 +15,7 @@ const sequelize = new Sequelize(database, username, password, {
 
 //tables
 const sessions = require("./tables/sessions")(sequelize);
+const users = require("./tables/users")(sequelize);
 
 async function connectToDB() {
   try {
@@ -32,4 +33,5 @@ connectToDB();
 module.exports = {
   sequelize: sequelize,
   sessions: sessions,
+  users: users,
 };

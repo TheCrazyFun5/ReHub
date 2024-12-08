@@ -15,7 +15,9 @@ const authenticateToken = (req, res, next) => {
       res.clearCookie("token");
       return res.redirect("/");
     }
-    req.ddddd = userToken;
+    req.userId = userToken.id;
+    const Token = jwt.sign({ id: userToken.id }, SECRET_Key, { expiresIn: "30m" });
+    res.cookie("token", Token, { httpOnly: true, sameSite: "strict" });
     next();
   });
 };

@@ -13,7 +13,6 @@ export default {
       type: String,
       Required: true,
     },
-
     imgChange: {
       type: String,
       Required: true,
