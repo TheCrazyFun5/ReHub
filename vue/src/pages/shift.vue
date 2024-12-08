@@ -1,7 +1,7 @@
 <script>
-import image from "@/assets/img/calendar.svg";
-import clock from "@/assets/img/clock.svg";
-import blockAnalitick from "@/components/ui/blockAnalitick.vue";
+import image from '@/assets/img/calendar.svg';
+import clock from '@/assets/img/clock.svg';
+import blockAnalitick from '@/components/ui/BlockAnalytics.vue';
 export default {
   components: { blockAnalitick },
   data() {
@@ -20,8 +20,7 @@ export default {
       :imgChange="clock"
       textChange="Часов за месяц"
       maininfoChange="72"
-      discriptChange="В этом месяце: 10"
-    />
+      discriptChange="В этом месяце: 10" />
   </div>
 </template>
 
