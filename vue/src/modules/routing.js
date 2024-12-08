@@ -1,22 +1,22 @@
-import { createMemoryHistory, createRouter, createWebHashHistory, createWebHistory } from 'vue-router';
-import VueCookies from 'vue-cookies';
-import axios from 'axios';
+import { createMemoryHistory, createRouter, createWebHashHistory, createWebHistory } from "vue-router";
+import VueCookies from "vue-cookies";
+import axios from "axios";
 //импорт страниц
-import news from '@/pages/News.vue';
-import shift from '@/pages/Shift.vue';
-import chats from '@/pages/Chats.vue';
-import accounting from '@/pages/Accounting.vue';
-import loginIn from '@/pages/LoginIn.vue';
-import NotFound from '@/pages/NotFound.vue';
+import news from "@/pages/news.vue";
+import shift from "@/pages/shift.vue";
+import chats from "@/pages/chats.vue";
+import accounting from "@/pages/accounting.vue";
+import loginIn from "@/pages/loginIn.vue";
+import NotFound from "@/pages/NotFound.vue";
 
 //описание маршрутов
 const routes = [
-  { path: '/', name: 'news', component: news },
-  { path: '/shift', name: 'shift', component: shift },
-  { path: '/chats', name: 'chats', component: chats },
-  { path: '/accounting', name: 'accounting', component: accounting },
-  { path: '/loginIn', name: 'loginIn', component: loginIn },
-  { path: '/:NotFoundUrl(.*)', name: 'NotFound', component: NotFound },
+  { path: "/", name: "news", component: news },
+  { path: "/shift", name: "shift", component: shift },
+  { path: "/chats", name: "chats", component: chats },
+  { path: "/accounting", name: "accounting", component: accounting },
+  { path: "/loginIn", name: "loginIn", component: loginIn },
+  { path: "/:NotFoundUrl(.*)", name: "NotFound", component: NotFound },
 ];
 
 const router = createRouter({
@@ -25,10 +25,10 @@ const router = createRouter({
 });
 
 async function isAuth() {
-  return true;
+  // return true;
   let f = false;
   await axios
-    .post('/api/authenticateToken')
+    .post("/api/authenticateToken")
     .then((response) => {
       f = response.data.isToken;
     })
@@ -39,10 +39,10 @@ async function isAuth() {
 router.beforeEach(async (to, from, next) => {
   let isAuthToken = false;
   isAuthToken = await isAuth();
-  if (to.path !== '/loginIn' && !isAuthToken) {
-    next({ name: 'loginIn' });
-  } else if (to.path === '/loginIn' && isAuthToken) {
-    next({ name: 'news' });
+  if (to.path !== "/loginIn" && !isAuthToken) {
+    next({ name: "loginIn" });
+  } else if (to.path === "/loginIn" && isAuthToken) {
+    next({ name: "news" });
   } else {
     next();
   }
