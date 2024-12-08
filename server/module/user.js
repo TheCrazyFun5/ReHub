@@ -5,7 +5,8 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const user = express.Router();
 
-const SECRET_Key = "access_secret";
+require("dotenv").config();
+const SECRET_KEY = process.env.SECRET_KEY_TOKEN;
 
 user.use("/loginIn", async function (req, res) {
   try {
@@ -14,7 +15,7 @@ user.use("/loginIn", async function (req, res) {
     if (userSearch.length >= 1) {
       const user = userSearch[0].dataValues;
       if (bcrypt.compareSync(data.password, user.Password)) {
-        const Token = jwt.sign({ id: user.id }, SECRET_Key, { expiresIn: "30m" });
+        const Token = jwt.sign({ id: user.id }, SECRET_KEY, { expiresIn: "30m" });
         res.cookie("token", Token, { httpOnly: true, sameSite: "strict" });
         res.status(200).json({ success: true });
       } else return res.status(200).json({ error: "Неверный логин или пароль" });

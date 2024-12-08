@@ -7,11 +7,13 @@ const news = require("./../module/news");
 const chats = require("./../module/chats");
 const accounting = require("./../module/accounting");
 
+require("dotenv").config();
+const SECRET_KEY = process.env.SECRET_KEY_TOKEN;
+
 api.use("/authenticateToken", (req, res) => {
-  const SECRET_Key = "access_secret";
   const token = req.cookies.token;
   if (!token) return res.status(200).json({ isToken: false });
-  jwt.verify(token, SECRET_Key, (error, userToken) => {
+  jwt.verify(token, SECRET_KEY, (error, userToken) => {
     if (error) {
       res.clearCookie("token");
       return res.status(200).json({ isToken: false });
