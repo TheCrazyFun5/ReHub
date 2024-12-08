@@ -1,6 +1,6 @@
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import newsСard from '@/components/ui/newsСard.vue';
+import newsСard from '@/components/ui/NewsСard.vue';
 
 export default {
   components: {

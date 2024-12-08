@@ -1,7 +1,7 @@
 <script>
-import Logo from '@/components/ui/logo.vue';
-import themesButton from '@/components/ui/themesButton.vue';
-import blueButton from '@/components/ui/blueButton.vue';
+import Logo from '@/components/ui/Logo.vue';
+import themesButton from '@/components/ui/ThemesButton.vue';
+import blueButton from '@/components/ui/BlueButton.vue';
 
 export default {
   data() {
