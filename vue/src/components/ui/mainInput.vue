@@ -29,7 +29,7 @@ export default {
           else this.$emit("back", value);
           break;
         case "Password":
-          if (value.length <= 6 && value.length > 0) this.errorShow("Неверный пароль");
+          if (value.length <= 5 && value.length > 0) this.errorShow("Неверный пароль");
           else this.$emit("back", value);
           break;
         default:
