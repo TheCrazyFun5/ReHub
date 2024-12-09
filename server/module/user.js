@@ -25,10 +25,17 @@ user.use("/loginIn", async function (req, res) {
   }
 });
 
-user.use("/ddd", (req, res) => {
-  res.status(200).json(`Ok ${req.userId}`);
-
-  console.log(req.userId);
+user.use("/getMiniProfile", async (req, res) => {
+  try {
+    const user = await bd.users.findOne({ where: { id: req.userId } });
+    res.status(200).json({
+      nameAndFirstName: `${user.dataValues.Name} ${user.dataValues.Surname}`,
+      profilePictureHref: `http://${req.hostname}:${process.env.PORT}${user.dataValues.Logo_src}`,
+    });
+  } catch (error) {
+    res.status(200).json("error");
+    console.log(`Error: [module-user] ${error}`);
+  }
 });
 
 module.exports = user;

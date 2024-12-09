@@ -1,6 +1,7 @@
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import newsСard from "@/components/ui/newsСard.vue";
+import axios from "axios";
 
 export default {
   components: {
@@ -81,6 +82,16 @@ export default {
       ],
       currentTime: new Date(),
     };
+  },
+  created() {
+    axios
+      .get("/api/news/getNews")
+      .then((respons) => {
+        this.news = respons.data;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   },
   mounted() {
     setInterval(() => {
