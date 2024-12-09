@@ -8,7 +8,7 @@ module.exports = function (sequelize) {
       MiniContent: { type: Sequelize.TEXT, allowNull: false },
       MaxContent: { type: Sequelize.TEXT, allowNull: false },
       Header: { type: Sequelize.STRING, allowNull: false },
-      DatePublication: { type: Sequelize.DATE, allowNull: false },
+      DatePublication: { type: Sequelize.STRING, allowNull: false },
     },
     {
       timestamps: false,
