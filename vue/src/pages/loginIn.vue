@@ -1,9 +1,9 @@
 <script>
-import axios from 'axios';
-import themesButton from '@/components/ui/ThemesButton.vue';
-import Logo from '@/components/ui/Logo.vue';
-import mainInput from '@/components/ui/MainInput.vue';
-import blueButton from '@/components/ui/BlueButton.vue';
+import axios from "axios";
+import themesButton from "@/components/ui/themesButton.vue";
+import Logo from "@/components/ui/logo.vue";
+import mainInput from "@/components/ui/mainInput.vue";
+import blueButton from "@/components/ui/blueButton.vue";
 export default {
   components: {
     Logo,
@@ -13,22 +13,22 @@ export default {
   },
   data() {
     return {
-      login: '',
-      password: '',
-      error: '',
+      login: "",
+      password: "",
+      error: "",
     };
   },
   methods: {
     loginIn() {
-      this.error = '';
+      this.error = "";
       if (this.login.length > 1 && this.password.length > 1) {
         axios
-          .post('/api/user/loginIn', {
+          .post("/api/user/loginIn", {
             login: this.login,
             password: this.password,
           })
           .then((response) => {
-            if (response.data.success) window.location.href = '/';
+            if (response.data.success) window.location.href = "/";
             if (response.data.error) this.error = response.data.error;
           })
           .catch((error) => console.error(error));

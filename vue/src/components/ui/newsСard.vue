@@ -1,5 +1,5 @@
 <script>
-import modalNewsWindow from '@/components/ui/ModalNewsWindow.vue';
+import modalNewsWindow from "@/components/ui/modalNewsWindow.vue";
 export default {
   data() {
     return {
@@ -13,12 +13,12 @@ export default {
   props: {
     dataItem: {
       type: Object,
-      default: { title: 'title', date: '2.12.2024', minText: 'Описание', maxText: 'Описание' },
+      default: { title: "title", date: "2.12.2024", minText: "Описание", maxText: "Описание" },
     },
   },
   created() {
     let dateNewstemp = this.dataItem.date;
-    let dateNews = dateNewstemp.split('.');
+    let dateNews = dateNewstemp.split(".");
     let newDate = new Date();
     if (newDate.getFullYear() === Number(dateNews[2])) {
       if (newDate.getMonth() + 1 === Number(dateNews[1])) {

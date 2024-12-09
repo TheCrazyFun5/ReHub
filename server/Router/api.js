@@ -1,11 +1,12 @@
 const express = require("express");
 const path = require("path");
 const jwt = require("jsonwebtoken");
-const api = express.Router();
 const user = require("./../module/user");
 const news = require("./../module/news");
 const chats = require("./../module/chats");
 const accounting = require("./../module/accounting");
+
+const api = express.Router();
 
 require("dotenv").config();
 const SECRET_KEY = process.env.SECRET_KEY_TOKEN;
@@ -18,6 +19,8 @@ api.use("/authenticateToken", (req, res) => {
       res.clearCookie("token");
       return res.status(200).json({ isToken: false });
     }
+    const Token = jwt.sign({ id: userToken.id }, SECRET_KEY, { expiresIn: "30m" });
+    res.cookie("token", Token, { httpOnly: true, sameSite: "strict" });
     return res.status(200).json({ isToken: true });
   });
 });

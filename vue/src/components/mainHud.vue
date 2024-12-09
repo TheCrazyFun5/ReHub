@@ -1,7 +1,7 @@
 <script>
-import Logo from '@/components/ui/Logo.vue';
-import themesButton from '@/components/ui/ThemesButton.vue';
-import blueButton from '@/components/ui/BlueButton.vue';
+import Logo from "@/components/ui/logo.vue";
+import themesButton from "@/components/ui/themesButton.vue";
+import blueButton from "@/components/ui/blueButton.vue";
 
 export default {
   data() {
@@ -17,7 +17,7 @@ export default {
     },
 
     localTime() {
-      return new Date(this.currentDate).toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' });
+      return new Date(this.currentDate).toLocaleTimeString("ru-RU", { hour: "2-digit", minute: "2-digit" });
     },
   },
 
@@ -50,7 +50,8 @@ export default {
                 <path
                   d="M2 17.3059C2 13.8732 2 12.1569 2.7788 10.7341C3.5576 9.31132 4.98042 8.42826 7.82604 6.66219L10.826 4.8003C13.8341 2.93343 15.3381 2 17 2C18.6619 2 20.1659 2.93343 23.174 4.8003L26.174 6.66218C29.0196 8.42826 30.4424 9.31132 31.2212 10.7341C32 12.1569 32 13.8732 32 17.3059V19.5875C32 25.4387 32 28.3644 30.2426 30.1821C28.4853 32 25.6568 32 20 32H14C8.34314 32 5.51473 32 3.75736 30.1821C2 28.3644 2 25.4387 2 19.5875V17.3059Z"
                   stroke="#448FFF"
-                  stroke-width="3" />
+                  stroke-width="3"
+                />
                 <path d="M21.5 26H12.5" stroke="#448FFF" stroke-width="3" stroke-linecap="round" />
               </g>
               <defs>
@@ -71,7 +72,8 @@ export default {
                   stroke="#1C1C1C"
                   stroke-width="3"
                   stroke-linecap="round"
-                  stroke-linejoin="round" />
+                  stroke-linejoin="round"
+                />
               </g>
               <defs>
                 <clipPath id="clip0_38_56">
@@ -90,13 +92,15 @@ export default {
                   d="M24.5001 4.00676C22.2938 2.73049 19.7322 2.00003 17.0001 2.00003C8.71585 2.00003 2.00012 8.71576 2.00012 17C2.00012 19.3996 2.56355 21.6674 3.56531 23.6788C3.83153 24.2132 3.92014 24.8242 3.7658 25.4009L2.87239 28.7401C2.48455 30.1895 3.81064 31.5155 5.26015 31.1278L8.59921 30.2344C9.17602 30.08 9.78694 30.1687 10.3214 30.4348C12.3327 31.4366 14.6006 32 17.0001 32C25.2843 32 32.0001 25.2842 32.0001 17C32.0001 14.2679 31.2696 11.7063 29.9934 9.50003"
                   stroke="#1C1C1C"
                   stroke-width="3"
-                  stroke-linecap="round" />
+                  stroke-linecap="round"
+                />
                 <path
                   d="M10.0001 17H10.0151M16.6501 17H16.6651M23.3151 17H23.3301"
                   stroke="#1C1C1C"
                   stroke-width="3"
                   stroke-linecap="round"
-                  stroke-linejoin="round" />
+                  stroke-linejoin="round"
+                />
               </g>
               <defs>
                 <clipPath id="clip0_38_61">
@@ -115,15 +119,18 @@ export default {
                   d="M14.1876 12.3126C14.1876 10.7593 15.4469 9.50006 17.0001 9.50006C18.5534 9.50006 19.8126 10.7593 19.8126 12.3126C19.8126 13.3437 19.2576 14.2453 18.4302 14.7349C17.7171 15.1567 17.0001 15.7966 17.0001 16.6251V18.5001"
                   stroke="#1C1C1C"
                   stroke-width="3"
-                  stroke-linecap="round" />
+                  stroke-linecap="round"
+                />
                 <path
                   d="M17 24.4999C17.8284 24.4999 18.5 23.8284 18.5 22.9999C18.5 22.1715 17.8284 21.4999 17 21.4999C16.1716 21.4999 15.5 22.1715 15.5 22.9999C15.5 23.8284 16.1716 24.4999 17 24.4999Z"
-                  stroke="#1C1C1C" />
+                  stroke="#1C1C1C"
+                />
                 <path
                   d="M9.5 4.00673C11.7063 2.73046 14.2679 2 17 2C25.2842 2 32 8.71572 32 17C32 25.2842 25.2842 32 17 32C8.71572 32 2 25.2842 2 17C2 14.2679 2.73046 11.7063 4.00673 9.5"
                   stroke="#1C1C1C"
                   stroke-width="3"
-                  stroke-linecap="round" />
+                  stroke-linecap="round"
+                />
               </g>
               <defs>
                 <clipPath id="clip0_38_68">
@@ -146,12 +153,14 @@ export default {
                       d="M12 5.75H10.3333C6.40497 5.75 4.44078 5.75 3.22038 6.84835C2 7.94671 2 9.71447 2 13.25V14M12 28.25H10.3333C6.40497 28.25 4.44078 28.25 3.22038 27.1517C2 26.0533 2 24.2855 2 20.75V20"
                       stroke="#1C1C1C"
                       stroke-width="3"
-                      stroke-linecap="round" />
+                      stroke-linecap="round"
+                    />
                     <path
                       d="M19.7625 2.52103C16.159 1.95538 14.3574 1.67256 13.1786 2.61304C11.9999 3.55353 11.9999 5.27388 11.9999 8.7146V25.2854C11.9999 28.7261 11.9999 30.4465 13.1786 31.387C14.3574 32.3275 16.159 32.0446 19.7625 31.4789L23.6439 30.8698C27.6347 30.2432 29.63 29.93 30.815 28.6126C31.9999 27.2953 31.9999 25.39 31.9999 21.5794V12.4207C31.9999 8.61008 31.9999 6.70478 30.815 5.38739C30.0232 4.50699 28.8694 4.07507 26.9999 3.69842"
                       stroke="#1C1C1C"
                       stroke-width="3"
-                      stroke-linecap="round" />
+                      stroke-linecap="round"
+                    />
                     <path d="M17 15.5V18.5" stroke="#1C1C1C" stroke-width="3" stroke-linecap="round" />
                   </g>
                   <defs>
@@ -172,19 +181,22 @@ export default {
                       stroke="#1C1C1C"
                       stroke-width="3"
                       stroke-linecap="round"
-                      stroke-linejoin="round" />
+                      stroke-linejoin="round"
+                    />
                     <path
                       d="M27.1101 28.0701C24.4401 30.5151 20.9001 32.0001 17.0001 32.0001C13.1001 32.0001 9.56014 30.5151 6.89014 28.0701C7.04014 26.6601 7.94014 25.2801 9.54514 24.2001C13.6551 21.4701 20.3751 21.4701 24.4551 24.2001C26.0601 25.2801 26.9601 26.6601 27.1101 28.0701Z"
                       stroke="#1C1C1C"
                       stroke-width="  3"
                       stroke-linecap="round"
-                      stroke-linejoin="round" />
+                      stroke-linejoin="round"
+                    />
                     <path
                       d="M17 32C25.2842 32 32 25.2842 32 17C32 8.71572 25.2842 2 17 2C8.71572 2 2 8.71572 2 17C2 25.2842 8.71572 32 17 32Z"
                       stroke="#1C1C1C"
                       stroke-width="3"
                       stroke-linecap="round"
-                      stroke-linejoin="round" />
+                      stroke-linejoin="round"
+                    />
                   </g>
                   <defs>
                     <clipPath id="clip0_42_332">
@@ -218,7 +230,8 @@ export default {
                     stroke-opacity="0.8"
                     stroke-width="3"
                     stroke-linecap="round"
-                    stroke-linejoin="round" />
+                    stroke-linejoin="round"
+                  />
                 </g>
                 <defs>
                   <clipPath id="clip0_65_196">

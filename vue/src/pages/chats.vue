@@ -1,5 +1,5 @@
 <script>
-import ChatDialog from '@/components/ui/ChatDialog.vue';
+import ChatDialog from "@/components/ui/chatDialog.vue";
 
 export default {
   components: {
