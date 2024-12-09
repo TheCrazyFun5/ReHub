@@ -54,6 +54,16 @@ export default {
       .catch((error) => console.error(error));
 >>>>>>> 4b2ffef (mini profile)
   },
+  methods: {
+    logout() {
+      axios
+        .get("/api/user/logout")
+        .then((response) => {
+          window.location.href = "/";
+        })
+        .catch((error) => console.error(error));
+    },
+  },
 
 >>>>>>> 21c41d1 (MainHud(50%))
 =======
@@ -187,7 +197,7 @@ export default {
       <div class="profile">
         <Transition name="slide-menu">
           <div v-if="showProfileMenu" class="profile_menu">
-            <button class="profile_menu_button profile_menu_button_exit">
+            <button @click="logout()" class="profile_menu_button profile_menu_button_exit">
               <span class="profile_menu_button_icon">
                 <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_42_322)">
