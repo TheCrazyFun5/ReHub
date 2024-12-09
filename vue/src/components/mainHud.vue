@@ -2,6 +2,7 @@
 import Logo from "@/components/ui/logo.vue";
 import themesButton from "@/components/ui/themesButton.vue";
 import blueButton from "@/components/ui/blueButton.vue";
+import axios from "axios";
 
 export default {
   data() {
@@ -13,7 +14,14 @@ export default {
       currentTime: new Date(),
 =======
       currentDate: null,
+<<<<<<< HEAD
 >>>>>>> 3c38805 (MainHud(Done))
+=======
+      userData: {
+        nameAndFirstName: "",
+        profilePictureHref: "",
+      },
+>>>>>>> 4b2ffef (mini profile)
     };
   },
 
@@ -26,15 +34,25 @@ export default {
       return new Date(this.currentDate).toLocaleTimeString("ru-RU", { hour: "2-digit", minute: "2-digit" });
     },
   },
-
-  created() {
-    this.intervalId = setInterval(() => {
+  mounted() {
+    // this.intervalId =
+    setInterval(() => {
       this.currentDate = Date.now();
     }, 1000);
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     };
+=======
+  created() {
+    axios
+      .get("/api/user/getMiniProfile")
+      .then((response) => {
+        this.userData = response.data;
+      })
+      .catch((error) => console.error(error));
+>>>>>>> 4b2ffef (mini profile)
   },
 
 >>>>>>> 21c41d1 (MainHud(50%))
@@ -234,8 +252,8 @@ export default {
           </div>
         </Transition>
         <button class="profile_button" @click="showProfileMenu = !showProfileMenu">
-          <img src="./../assets/img/avatar.jpg" alt="Avatar" class="profile_avatar" />
-          <span class="profile_userName">Анна Волокова</span>
+          <img :src="userData.profilePictureHref" alt="Avatar" class="profile_avatar" />
+          <span class="profile_userName">{{ userData.nameAndFirstName }}</span>
         </button>
       </div>
     </aside>
