@@ -16,6 +16,7 @@ const sequelize = new Sequelize(database, username, password, {
 //tables
 const sessions = require("./tables/sessions")(sequelize);
 const users = require("./tables/users")(sequelize);
+const news = require("./tables/news")(sequelize);
 
 async function connectToDB() {
   try {
@@ -34,4 +35,5 @@ module.exports = {
   sequelize: sequelize,
   sessions: sessions,
   users: users,
+  news: news,
 };

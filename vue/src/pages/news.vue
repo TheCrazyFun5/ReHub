@@ -84,6 +84,14 @@ export default {
     };
   },
   created() {},
+<<<<<<< HEAD
+=======
+  mounted() {
+    setInterval(() => {
+      this.currentTime = new Date();
+    }, 1000);
+  },
+>>>>>>> 11b46e5 ([Server + Date])
 };
 </script>
 

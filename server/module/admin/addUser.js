@@ -1,6 +1,6 @@
 const sequelize = require("sequelize");
 const { Op } = require("sequelize");
-const bd = require("./dataBase");
+const bd = require("./../dataBase");
 const bcrypt = require("bcryptjs");
 //
 //
