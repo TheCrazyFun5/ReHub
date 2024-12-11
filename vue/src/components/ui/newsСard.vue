@@ -1,5 +1,5 @@
 <script>
-import modalNewsWindow from "@/components/ui/modalNewsWindow.vue";
+import modalNewsWindow from "@/components/ui/modalWindows/modalNewsWindow.vue";
 export default {
   data() {
     return {
