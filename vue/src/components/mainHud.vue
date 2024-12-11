@@ -2,6 +2,7 @@
 import Logo from "@/components/ui/logo.vue";
 import themesButton from "@/components/ui/themesButton.vue";
 import blueButton from "@/components/ui/blueButton.vue";
+import modelShiftWindow from "@/components/ui/modalWindows/modelShiftWindow.vue";
 import axios from "axios";
 
 export default {
@@ -9,6 +10,7 @@ export default {
     return {
       showProfileMenu: false,
       currentDate: null,
+      showModelShift: false,
       userData: {
         nameAndFirstName: "",
         profilePictureHref: "",
@@ -54,6 +56,7 @@ export default {
     Logo,
     themesButton,
     blueButton,
+    modelShiftWindow,
   },
 };
 </script>
@@ -134,7 +137,7 @@ export default {
           </span>
           <span class="nav_button_text">Сообщения</span>
         </RouterLink>
-        <button class="nav_button">
+        <!-- <button class="nav_button">
           <span class="nav_button_icon">
             <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_38_68)">
@@ -163,7 +166,7 @@ export default {
             </svg>
           </span>
           <span class="nav_button_text">IT-Отдел</span>
-        </button>
+        </button> -->
       </nav>
       <div class="profile">
         <Transition name="slide-menu">
@@ -195,7 +198,7 @@ export default {
               </span>
               <span class="profile_menu_button_label">Выйти</span>
             </button>
-            <button class="profile_menu_button profile_menu_button_inProfile">
+            <!-- <button class="profile_menu_button profile_menu_button_inProfile">
               <span class="profile_menu_button_icon">
                 <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_42_332)">
@@ -229,7 +232,7 @@ export default {
                 </svg>
               </span>
               <span class="profile_menu_button_label">Мой профиль</span>
-            </button>
+            </button> -->
           </div>
         </Transition>
         <button class="profile_button" @click="showProfileMenu = !showProfileMenu">
@@ -265,7 +268,13 @@ export default {
             </span>
             <span class="header_info_timer">0ч.0м.0с.</span>
           </div>
-          <blueButton>Начать смену</blueButton>
+          <modelShiftWindow
+            :time="localTime"
+            :date="localDate"
+            :visibility="showModelShift"
+            @close="showModelShift = false"
+          />
+          <blueButton @click="showModelShift = !showModelShift">Начать смену</blueButton>
         </div>
       </div>
       <RouterView class="content" />
