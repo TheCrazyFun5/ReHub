@@ -83,21 +83,7 @@ export default {
       currentTime: new Date(),
     };
   },
-  created() {
-    axios
-      .get("/api/news/getNews")
-      .then((respons) => {
-        this.news = respons.data;
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  },
-  mounted() {
-    setInterval(() => {
-      this.currentTime = new Date();
-    }, 1000);
-  },
+  created() {},
 };
 </script>
 

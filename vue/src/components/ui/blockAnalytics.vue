@@ -1,12 +1,15 @@
 <script>
+import imgClock from "../../assets/img/imgClock.vue";
+import imgCalendar from "../../assets/img/imgCalendar.vue";
 export default {
+  components: { imgClock, imgCalendar },
   props: {
     textChange: {
       type: String,
       Required: true,
     },
     maininfoChange: {
-      type: String,
+      type: Object,
       Required: true,
     },
     discriptChange: {
@@ -25,7 +28,7 @@ export default {
   <div class="mainBlock">
     <header>
       <div class="nameTag">{{ textChange }}</div>
-      <img :src="imgChange" alt="My img" />
+      <div><slot /></div>
     </header>
     <div class="mainInfocard">{{ maininfoChange }}</div>
     <div class="discriptionsCard">{{ discriptChange }}</div>
@@ -34,12 +37,11 @@ export default {
 
 <style scoped>
 .mainBlock {
-  max-width: 400px;
+  max-width: 390px;
   max-height: 246px;
   width: 100%;
   height: 100%;
-  margin: 9px;
-  background-color: #ffffff;
+  background-color: transparent;
   padding: 30px 30px 30px 38px;
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 8px 2px rgba(124, 124, 124, 0.2);
@@ -53,7 +55,7 @@ header {
 
 .nameTag {
   font-size: 40px;
-  color: #1c1c1c;
+  color: var(--ColorTextCart);
   margin-bottom: 18px;
 }
 
@@ -65,6 +67,6 @@ header {
 
 .mainInfocard {
   font-size: 90px;
-  color: #1c1c1c;
+  color: var(--ColorTextCart);
 }
 </style>
