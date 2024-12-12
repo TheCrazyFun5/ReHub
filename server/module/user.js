@@ -25,6 +25,16 @@ user.use("/loginIn", async function (req, res) {
   }
 });
 
+user.use("/logout", async (req, res) => {
+  try {
+    res.clearCookie("token");
+    res.status(200).json();
+  } catch (error) {
+    res.status(200).json("error");
+    console.log(`Error: [module-user] ${error}`);
+  }
+});
+
 user.use("/getMiniProfile", async (req, res) => {
   try {
     const user = await bd.users.findOne({ where: { id: req.userId } });

@@ -1,5 +1,5 @@
 <script>
-import modalNewsWindow from "@/components/ui/modalNewsWindow.vue";
+import modalNewsWindow from "@/components/ui/modalWindows/modalNewsWindow.vue";
 export default {
   data() {
     return {
@@ -13,7 +13,7 @@ export default {
   props: {
     dataItem: {
       type: Object,
-      default: { title: "title", date: "2.12.2024", minText: "Описание", maxText: "Описание" },
+      default: { title: "title", date: "9.12.2024", minText: "Описание", maxText: "Описание" },
     },
   },
   created() {

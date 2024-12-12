@@ -6,7 +6,8 @@
     "v:dev": "cd vue && vite",
     "v:build": "cd vue && vite build",
     "s:dev": "nodemon ./server/app.js",
-    "s:addUser": "nodemon ./server/module/addUser.js",
+    "s:addUser": "nodemon ./server/module/admin/addUser.js",
+    "s:addNews": "nodemon ./server/module/admin/addNews.js",
     "f:build": "cd vue && vite build && cd ../server && nodemon ./app.js",
     "f:preview": "cd vue && vite build && cd ../server && node ./app.js"
   },

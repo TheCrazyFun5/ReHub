@@ -62,6 +62,9 @@ export default {
   }
 }
 .modal__main {
+  overflow: auto;
+  max-height: 69vh;
+  height: 100%;
   margin-top: 56px;
   max-width: 800px;
   padding: 0px 46px;
