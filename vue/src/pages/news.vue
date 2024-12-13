@@ -14,10 +14,13 @@ export default {
     };
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
   created() {},
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 3551408 (исправил ошибки слияния от Димы)
   created() {
     axios
       .get("/api/news/getNews")
@@ -34,7 +37,10 @@ export default {
       this.currentTime = new Date();
     }, 1000);
   },
+<<<<<<< HEAD
 >>>>>>> 11b46e5 ([Server + Date])
+=======
+>>>>>>> 3551408 (исправил ошибки слияния от Димы)
 };
 </script>
 
