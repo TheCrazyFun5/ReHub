@@ -13,9 +13,6 @@ export default {
       currentTime: new Date(),
     };
   },
-<<<<<<< HEAD
-  created() {},
-=======
   created() {
     axios
       .get("/api/news/getNews")
@@ -31,7 +28,6 @@ export default {
       this.currentTime = new Date();
     }, 1000);
   },
->>>>>>> 0be8ea2914baf8136387a3dc8db6a146e9f28f74
 };
 </script>
 
