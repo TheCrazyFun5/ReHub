@@ -10,7 +10,7 @@ const bd = require("./module/dataBase");
 
 app.use(express.json());
 app.use(cookieParser());
-// Раздача статических файлов из папки Public
+
 app.use(express.static(path.join(__dirname, "Public")));
 app.use(router);
 

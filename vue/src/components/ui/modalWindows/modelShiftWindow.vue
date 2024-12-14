@@ -16,10 +16,6 @@ export default {
       type: Boolean,
       required: true,
     },
-    nameUser: {
-      type: String,
-      required: true,
-    },
     time: {
       type: String,
       required: true,
