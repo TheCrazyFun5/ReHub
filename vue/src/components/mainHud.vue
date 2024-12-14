@@ -3,6 +3,7 @@ import Logo from "@/components/ui/logo.vue";
 import themesButton from "@/components/ui/themesButton.vue";
 import blueButton from "@/components/ui/blueButton.vue";
 import modelShiftWindow from "@/components/ui/modalWindows/modelShiftWindow.vue";
+import modalIT from "@/components/ui/modalWindows/modalITWindows.vue";
 import axios from "axios";
 
 export default {
@@ -21,7 +22,11 @@ export default {
 =======
 =======
       showModelShift: false,
+<<<<<<< HEAD
 >>>>>>> 0be8ea2 (1)
+=======
+      showModelIT: false,
+>>>>>>> 7bb9abd (modal IT)
       userData: {
         nameAndFirstName: "",
         profilePictureHref: "",
@@ -89,6 +94,7 @@ export default {
     themesButton,
     blueButton,
     modelShiftWindow,
+    modalIT,
   },
 };
 </script>
@@ -169,7 +175,8 @@ export default {
           </span>
           <span class="nav_button_text">Сообщения</span>
         </RouterLink>
-        <!-- <button class="nav_button">
+        <modalIT :visibility="showModelIT" @close="showModelIT = false" />
+        <button class="nav_button" @click="showModelIT = true">
           <span class="nav_button_icon">
             <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_38_68)">
@@ -198,7 +205,7 @@ export default {
             </svg>
           </span>
           <span class="nav_button_text">IT-Отдел</span>
-        </button> -->
+        </button>
       </nav>
       <div class="profile">
         <Transition name="slide-menu">

@@ -1,10 +1,10 @@
 const Sequelize = require("sequelize");
 
 //данные для БД
-const database = "sql7750517";
-const username = "sql7750517";
-const password = "aDF4jw9zeR";
-const host = "sql7.freemysqlhosting.net";
+const database = "ReHub";
+const username = "root";
+const password = "";
+const host = "127.0.0.1";
 const dialect = "mysql";
 
 const sequelize = new Sequelize(database, username, password, {

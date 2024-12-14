@@ -3,6 +3,7 @@ const sequelize = require("sequelize");
 const bd = require("./dataBase");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
+const mail = require("./mainl");
 const user = express.Router();
 
 require("dotenv").config();
@@ -45,6 +46,21 @@ user.use("/getMiniProfile", async (req, res) => {
   } catch (error) {
     res.status(200).json("error");
     console.log(`Error: [module-user] ${error}`);
+  }
+});
+user.use("/IT", async (req, res) => {
+  try {
+    const user = await bd.users.findOne({ where: { id: req.userId } });
+    let mailOptions = {
+      from: '"ReHub" <maddison53@ethereal.email>', // От кого
+      to: process.env.MAIL_ADMIN, // Кому
+      subject: "Обращение в IT-отдел", // Тема письма
+      text: `ID: ${req.userId}\nФИО: ${user.dataValues.Surname} ${user.dataValues.Name} ${user.dataValues.Patronymic}\nОбращение: ${req.body.data}`, // Текст письма
+    };
+    await mail.send_msg(mailOptions);
+    res.status(200).json("Письмо отправлено");
+  } catch (error) {
+    res.status(200).json(error);
   }
 });
 

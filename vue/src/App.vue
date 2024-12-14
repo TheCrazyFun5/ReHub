@@ -1,5 +1,4 @@
 <script setup>
-// import HelloWorld from './components/HelloWorld.vue'
 import navHud from "@/components/mainHud.vue";
 import { useRoute } from "vue-router";
 const route = useRoute();
