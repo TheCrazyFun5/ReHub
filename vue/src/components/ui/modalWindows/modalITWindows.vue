@@ -13,6 +13,7 @@ export default {
     return {
       send: "",
       text: "",
+      text14: "",
     };
   },
   methods: {
