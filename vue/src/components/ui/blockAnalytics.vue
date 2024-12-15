@@ -1,6 +1,6 @@
 <script>
 import imgClock from "../../assets/img/chartAssets/imgClock.vue";
-import imgCalendar from "../../assets/img/imgCalendar.vue";
+import imgCalendar from "../../assets/img/chartAssets/imgCalendar.vue";
 export default {
   components: { imgClock, imgCalendar },
   props: {

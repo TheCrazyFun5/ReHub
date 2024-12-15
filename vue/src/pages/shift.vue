@@ -1,5 +1,5 @@
 <script>
-import ImgCalendar from "@/assets/img/imgCalendar.vue";
+import ImgCalendar from "@/assets/img/chartAssets/imgCalendar.vue";
 import ImgClock from "@/assets/img/chartAssets/imgClock.vue";
 import blockAnalitick from "@/components/ui/blockAnalytics.vue";
 import imgDollar from "@/assets/img/chartAssets/imgDollar.vue";
