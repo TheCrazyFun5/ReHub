@@ -1,5 +1,5 @@
 <script>
-import imgClock from "../../assets/img/imgClock.vue";
+import imgClock from "../../assets/img/chartAssets/imgClock.vue";
 import imgCalendar from "../../assets/img/imgCalendar.vue";
 export default {
   components: { imgClock, imgCalendar },

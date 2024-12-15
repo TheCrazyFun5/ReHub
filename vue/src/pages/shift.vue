@@ -1,9 +1,9 @@
 <script>
 import ImgCalendar from "@/assets/img/imgCalendar.vue";
-import ImgClock from "@/assets/img/imgClock.vue";
+import ImgClock from "@/assets/img/chartAssets/imgClock.vue";
 import blockAnalitick from "@/components/ui/blockAnalytics.vue";
-import imgDollar from "@/assets/img/imgDollar.vue";
-import imgGraf from "@/assets/img/imgGraf.vue";
+import imgDollar from "@/assets/img/chartAssets/imgDollar.vue";
+import imgGraf from "@/assets/img/chartAssets/imgGraf.vue";
 import grafic from "@/components/ui/Grafic.vue";
 import diagram from "@/components/ui/diagrama.vue";
 export default {
