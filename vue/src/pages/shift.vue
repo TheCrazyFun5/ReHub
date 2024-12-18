@@ -68,7 +68,7 @@ export default {
           <div>
             <h2>Оклад</h2>
             <div class="money">
-              <img src="../assets/img/green.svg" alt="" />
+              <img src="../assets/img/chartAssets/green.svg" alt="" />
               <h3>{{ allShiftData.salaryMonth.salary }}</h3>
             </div>
           </div>
@@ -76,7 +76,7 @@ export default {
           <div>
             <h2>Премия</h2>
             <div class="money">
-              <img src="../assets/img/yelow.svg" alt="" />
+              <img src="../assets/img/chartAssets/yelow.svg" alt="" />
               <h3>{{ allShiftData.salaryMonth.prize }}</h3>
             </div>
           </div>
@@ -84,7 +84,7 @@ export default {
           <div>
             <h2>Переработки</h2>
             <div class="money">
-              <img src="../assets/img/red.svg" alt="" />
+              <img src="../assets/img/chartAssets/orange.svg" alt="" />
               <h3>{{ allShiftData.salaryMonth.recycling }}</h3>
             </div>
           </div>

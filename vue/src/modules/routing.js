@@ -25,7 +25,7 @@ const router = createRouter({
 });
 
 async function isAuth() {
-  return true;
+  // return true;
   let f = false;
   await axios
     .post("/api/authenticateToken")
